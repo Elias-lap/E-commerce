@@ -1,0 +1,12 @@
+.Footer {
+ height: 400px;
+    background-color: gray;
+    padding-top: 150px;
+}
+.Footer input {
+    width: 80%;
+}
+.Footer .Payment {
+   border: 2px black solid;
+   width: 80%;
+}
