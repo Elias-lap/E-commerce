@@ -39,11 +39,11 @@ export default function Register() {
  
  let formik = useFormik({
   initialValues :{
-    name: " ",
-    email:" ",
-    password:" ",
-    rePassword:" ",
-    phone:" "
+    name: "",
+    email:"",
+    password:"",
+    rePassword:"",
+    phone:""
   },
   validationSchema,
   onSubmit:HandelSumbit 
@@ -64,14 +64,14 @@ export default function Register() {
         <label htmlFor="email">Email :</label>
         <input  onBlur={formik.handleBlur}  onChange={formik.handleChange}  type="email" value={formik.values.email} id='email'  className=' form-control my-2' name='email'/>
          {formik.errors.email  && formik.touched.email ? <div className=' alert alert-danger'>{ formik.errors.email}</div> :null} 
-        <label htmlFor="password">password :</label>
-        <input  onBlur={formik.handleBlur}  onChange={formik.handleChange}  type="password" value={formik.values.password}id='password'  className=' form-control my-2' name='password'/>
+        <label  htmlFor="password">password :</label>
+        <input placeholder='Q12345678'  onBlur={formik.handleBlur}  onChange={formik.handleChange}  type="password" value={formik.values.password}id='password'  className=' form-control my-2' name='password'/>
          {formik.errors.password && formik.touched.password ? <div className=' alert alert-danger'>{ formik.errors.password}</div> :null} 
         <label htmlFor="rePassword">rePassword:</label>
         <input  onBlur={formik.handleBlur}  onChange={formik.handleChange}  type="password"  value={formik.values.rePassword} id='rePassword'  className=' form-control' name='rePassword'/>
          {formik.errors.rePasswor && formik.touched.rePassword ? <div className=' alert alert-danger'>{ formik.errors.rePassword}</div> :null} 
         <label htmlFor="Phone">Phone:</label>
-        <input  onBlur={formik.handleBlur}  onChange={formik.handleChange}  type="tel"value={formik.values.phone}id='phone'  className=' form-control' name='phone'/>
+        <input  placeholder='01012345678' onBlur={formik.handleBlur}  onChange={formik.handleChange}  type="tel"value={formik.values.phone}id='phone'  className=' form-control' name='phone'/>
          {formik.errors.phone && formik.touched.phone  ? <div className=' alert alert-danger'>{ formik.errors.phone}</div> :null} 
          {isloading ?<button className='text-white btn bg-main my-2' type="button">  <i className="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse"></i></button> :
          <button disabled = {!(formik.isValid && formik.dirty)} className='text-white btn bg-main my-2' type="submit"> sumbit</button>}

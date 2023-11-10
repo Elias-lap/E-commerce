@@ -41,8 +41,8 @@ export default function Login({encodeToken}) {
  let formik = useFormik({
   initialValues :{
     
-    email:" ",
-    password:" ",
+    email:"",
+    password:"",
    
   },
   validationSchema,
